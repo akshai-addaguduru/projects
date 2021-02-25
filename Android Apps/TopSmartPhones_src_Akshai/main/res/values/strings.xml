@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">Large Tech Companies</string>
+    <string name="top_5_smart_phones_now">Top 5 Smart Phones Now:</string>
+    <string name="samsung_galaxy_s10e">Samsung Galaxy S10e</string>
+    <string name="iphone_xs_max">iPhone XS Max</string>
+    <string name="oneplus_6t">OnePlus 6T</string>
+    <string name="google_pixel_3">Google Pixel 3</string>
+    <string name="honor_view_20">Honor View 20</string>
+</resources>
