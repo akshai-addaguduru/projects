@@ -86,11 +86,11 @@ point.draw(); */
 
 // constructors and access-modifiers
 
-class Point {
+/* class Point {
     // private x: number;
     // private y: number;   // remove from here..use it in const()
 
-    constructor(private x?: number, private y?: number) {     // in Java, C# we can use multiple constructors
+    constructor(private _x?: number, private _y?: number) {     // in Java, C# we can use multiple constructors
         // but in TS, we can have only one constructor per class
         // this.x = x;
         // this.y = y;
@@ -98,18 +98,18 @@ class Point {
 
     draw() {
         //..logic here
-        console.log('X: ' + this.x + ', Y: ' + this.y);
+        console.log('X: ' + this._x + ', Y: ' + this._y);
     }
 
-    getX() {
-        return this.x;
+    get X() {        // by using _x(variable), we can user X or x here..wouldnt create an error
+        return this._x;
     }
 
-    setX(value) {        // this is new value for x
+    set X(value) {        // this is new value for x
         if (value < 0) {
             throw new Error('value cannot be less than 0');
 
-        this.x = value;     // now see below to see how to change X value
+        this._x = value;     // now see below to see how to change X value
         }
     }
 }   // everything is in one block and supports cohesion
@@ -119,16 +119,30 @@ class Point {
 let point = new Point(1, 2);    // an object is an instance of class
 // here bcx X,Y are private..we can't access directly using obj.
 // so we create a method where we return the values in the class itself..check above
-let x = point.getX();   // now we can access private variable
-point.setX(10);     // now X value changed from 1 to 10
+let x = point.X;   // now we can access private variable
+point.X = 10;     // now X value changed from 1 to 10
 // to workaround on the similar concept here, TS has properties concept
+point.draw(); */
 
 
+// ---------------------------------------------------------------------------------------------------------------------------------
+// modules
+
+
+class Point {
+
+    constructor(private x?: number, private y?: number) { 
+        // ......
+    }
+
+    draw() {
+        //..logic here
+        console.log('X: ' + this.x + ', Y: ' + this.y);
+    }
+}
+
+let point = new Point(1, 2); 
 point.draw();
-
-
-
-
 
 
 
