@@ -1,16 +1,14 @@
+"use strict";
 // code to show TS compiling to JS
-
+Object.defineProperty(exports, "__esModule", { value: true });
 /* function log(message) {
- console.log(message);   
+ console.log(message);
 }
 
 var message = 'Hi User';
 log(message); */
-
 // ---------------------------------------------------------------------------------------------------------------------------------
-
 // variables
-
 /* function doThis() {
     for(let i=0; i<5; i++) {        //try with var and let..check 'i' in finally..execute with error and check main.js
         console.log(i);
@@ -18,13 +16,10 @@ log(message); */
     console.log('Finally check this: ', +i);
 }
 doThis(); */
-
 // ---------------------------------------------------------------------------------------------------------------------------------
-
 //type assertions in typescript
 // let message = 'abc';    //message is of type string
 // message.endsWith('c');  // since string, we get intellisense bcz TS recognized message as string
-
 // now check this
 /* let message;        // is of type any
 message = 'abc';    // message is still of type any but not string
@@ -32,13 +27,8 @@ message = 'abc';    // message is still of type any but not string
 let endsWithC = (<string>message).endsWith('c');    //this is how to define the any type to string type
 let alternativeWay = (message as string).endsWith('c');   //this is how to define the any type to string type - alt way
  */
-
-
-
-
 // ----------------------------------------------------------------------------------------------------------------------------------
 //cohesion principle - create as a class
-
 /* interface Point {
     x:number,
     y:number,
@@ -57,10 +47,7 @@ drawPoint({
     x:1,
     y :2
 }); */
-
-
 //now class method bcz interface violates cohesion
-
 /* class Point {
     x: number;
     y: number;
@@ -82,10 +69,7 @@ let point = new Point();    // an object is an instance of class
 point.x =1;
 point.y = 2;
 point.draw(); */
-
-
 // constructors and access-modifiers
-
 /* class Point {
     // private x: number;
     // private y: number;   // remove from here..use it in const()
@@ -123,27 +107,14 @@ let x = point.X;   // now we can access private variable
 point.X = 10;     // now X value changed from 1 to 10
 // to workaround on the similar concept here, TS has properties concept
 point.draw(); */
-
-
 // ---------------------------------------------------------------------------------------------------------------------------------
 // modules
-
 // creating a point module..check point.ts
-
 // import {Point} from './point';     // we use Point keyword to instantiate here..
 // let point = new Point(1, 2); 
 // point.draw();
-
-
-
 // export module from like.component.ts tutorial
-
-import { LikeComponent } from "./like.component";
-
-let component = new LikeComponent(10, true);
+var like_component_1 = require("./like.component");
+var component = new like_component_1.LikeComponent(10, true);
 component.onClick();
-console.log(`likesCount: ${component.likesCount}, isSelected: ${component.isSelected}`);
-
-
-
-
+console.log("likesCount: " + component.likesCount + ", isSelected: " + component.isSelected);
