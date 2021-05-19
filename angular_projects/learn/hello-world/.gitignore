@@ -47,3 +47,6 @@ Thumbs.db
 
 # node
 node_modules
+
+#tab ignore
+.tabignore

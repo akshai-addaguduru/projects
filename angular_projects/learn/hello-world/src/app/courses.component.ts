@@ -7,24 +7,29 @@ import { CoursesService } from './courses.service';
     selector: 'courses',
     template: `
         <h2>
-            {{ title }}
+            {{ title }}     <!--string interpolation this ways is good for rendering headings, paras, divs and spans -->
         </h2>
+        <img src="{{ imageUrl }}"/>     <!--this is called as string interpolation...below we do proprty binding-->
+        <img [src]="title" />
+<!-- 
         <ul>
             <li *ngFor="let course of courses">
                 {{ course }}
-            </li>    <!-- Special function of angular 'ngFor' -->
+            </li>
 
-        </ul>
+        </ul> -->
         
         `
 })
 
 export class CoursesComponent {
     title = "List of courses";
-    courses;     // real-world app gets data from a service here
+    // courses;     // real-world app gets data from a service here
     // so we create a service file... 'courses.service.ts' ...check that
-
-    constructor(service: CoursesService) {
+    imageUrl = "https://cdn.pixabay.com/photo/2015/04/23/22/00/tree-736885__340.jpg";
+    
+    
+/*     constructor(service: CoursesService) {
         // let service = new CoursesService();   //init the service object
         this.courses = service.getCourses();    // this tightly couples the service object
         // every change we make in the courses, we make it back in the service object...
@@ -32,7 +37,7 @@ export class CoursesComponent {
         // we instruct angular to implement the dependencies using the constructor
 
         // we should register our dependencies into our module..
-    }
+    } */
 
 }
 
