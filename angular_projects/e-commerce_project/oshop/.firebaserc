@@ -1,11 +1,5 @@
 {
-  "targets": {
-    "oshop-7e082": {
-      "hosting": {
-        "oshop": [
-          "oshop-7e082"
-        ]
-      }
-    }
+  "projects": {
+    "default": "oshop-7e082"
   }
 }
