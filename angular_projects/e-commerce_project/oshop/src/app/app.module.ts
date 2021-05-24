@@ -1,10 +1,12 @@
+import { AuthGuard as AuthGuard } from './auth-guard.service';
+import { AuthService } from './auth.service';
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import {AngularFireModule} from '@angular/fire';
 import {AngularFireDatabaseModule} from '@angular/fire/database';
 import {AngularFireAuthModule} from '@angular/fire/auth';
 import {environment} from 'src/environments/environment';
-import {RouterModule} from '@angular/router';
+import { RouterModule, CanActivate } from '@angular/router';
 import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
 
 
@@ -42,18 +44,26 @@ import { LoginComponent } from './login/login.component';
     AngularFireAuthModule,
     NgbModule,
     RouterModule.forRoot([
+      //routes for anonymous users
       { path:'', component: HomeComponent},
+      { path:'login', component: LoginComponent},
       { path:'products', component: ProductsComponent},
       { path:'shopping-cart', component: ShoppingCartComponent},
-      { path:'check-out', component: CheckOutComponent},
-      { path:'order-success', component: OrderSuccessComponent},
-      { path:'my/orders', component: MyOrdersComponent},
-      { path:'login', component: LoginComponent},
-      { path:'admin/products', component: AdminProductsComponent},
-      { path:'admin/orders', component: AdminOrdersComponent}, 
+
+      // routes for normal-users
+      { path:'check-out', component: CheckOutComponent, canActivate : [AuthGuard]},   //can activate will support an AuthGuard (route guard) here..check auth-guard.service.ts
+      { path:'order-success', component: OrderSuccessComponent, canActivate : [AuthGuard]},
+      { path:'my/orders', component: MyOrdersComponent, canActivate : [AuthGuard]},
+      
+      //routes for admins
+      { path:'admin/products', component: AdminProductsComponent, canActivate : [AuthGuard]},
+      { path:'admin/orders', component: AdminOrdersComponent, canActivate : [AuthGuard]}, 
     ])
   ],
-  providers: [],
+  providers: [
+    AuthService,
+    AuthGuard
+  ],
   bootstrap: [AppComponent]
 })
 
