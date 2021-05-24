@@ -1,13 +1,15 @@
+import { AdminAuthGuard } from './admin-auth-guard.service';
+import { UserService } from './user.service';
 import { AuthGuard as AuthGuard } from './auth-guard.service';
 import { AuthService } from './auth.service';
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-import {AngularFireModule} from '@angular/fire';
-import {AngularFireDatabaseModule} from '@angular/fire/database';
-import {AngularFireAuthModule} from '@angular/fire/auth';
-import {environment} from 'src/environments/environment';
+import { AngularFireModule } from '@angular/fire';
+import { AngularFireDatabaseModule } from '@angular/fire/database';
+import { AngularFireAuthModule } from '@angular/fire/auth';
+import { environment } from 'src/environments/environment';
 import { RouterModule, CanActivate } from '@angular/router';
-import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 
 
@@ -45,24 +47,34 @@ import { LoginComponent } from './login/login.component';
     NgbModule,
     RouterModule.forRoot([
       //routes for anonymous users
-      { path:'', component: HomeComponent},
-      { path:'login', component: LoginComponent},
-      { path:'products', component: ProductsComponent},
-      { path:'shopping-cart', component: ShoppingCartComponent},
+      { path: '', component: HomeComponent },
+      { path: 'login', component: LoginComponent },
+      { path: 'products', component: ProductsComponent },
+      { path: 'shopping-cart', component: ShoppingCartComponent },
 
       // routes for normal-users
-      { path:'check-out', component: CheckOutComponent, canActivate : [AuthGuard]},   //can activate will support an AuthGuard (route guard) here..check auth-guard.service.ts
-      { path:'order-success', component: OrderSuccessComponent, canActivate : [AuthGuard]},
-      { path:'my/orders', component: MyOrdersComponent, canActivate : [AuthGuard]},
-      
+      { path: 'check-out', component: CheckOutComponent, canActivate: [AuthGuard] },   //can activate will support an AuthGuard (route guard) here..check auth-guard.service.ts
+      { path: 'order-success', component: OrderSuccessComponent, canActivate: [AuthGuard] },
+      { path: 'my/orders', component: MyOrdersComponent, canActivate: [AuthGuard] },
+
       //routes for admins
-      { path:'admin/products', component: AdminProductsComponent, canActivate : [AuthGuard]},
-      { path:'admin/orders', component: AdminOrdersComponent, canActivate : [AuthGuard]}, 
+      {
+        path: 'admin/products',
+        component: AdminProductsComponent,
+        canActivate: [AuthGuard, AdminAuthGuard]
+      },
+      {
+        path: 'admin/orders',
+        component: AdminOrdersComponent,
+        canActivate: [AuthGuard, AdminAuthGuard]
+      },
     ])
   ],
   providers: [
     AuthService,
-    AuthGuard
+    AuthGuard,
+    UserService,
+    AdminAuthGuard
   ],
   bootstrap: [AppComponent]
 })
