@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".ChainsmokersNews">
+
+    <TextView
+        android:id="@+id/chainsmokersTitleTextView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:paddingLeft="@dimen/textPadding_5dp"
+        android:paddingTop="@dimen/textPadding_10dp"
+        android:paddingRight="@dimen/textPadding_5dp"
+        android:paddingBottom="@dimen/textPadding_10dp"
+        android:text="@string/txtTitle2"
+        android:textColor="@android:color/holo_red_dark"
+        android:textSize="@dimen/titleTextSize" />
+
+    <TextView
+        android:id="@+id/textViewP1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:paddingLeft="@dimen/textPadding_5dp"
+        android:paddingTop="@dimen/textPadding_10dp"
+        android:paddingRight="@dimen/textPadding_5dp"
+        android:paddingBottom="@dimen/textPadding_10dp"
+        android:text="@string/txtChainsmokersTitleP1"
+        android:textColor="@android:color/black"
+        android:textSize="@dimen/txtAviciiP1" />
+
+    <TextView
+        android:id="@+id/txtViewP1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:paddingLeft="@dimen/textPadding_5dp"
+        android:paddingTop="@dimen/textPadding_10dp"
+        android:paddingRight="@dimen/textPadding_5dp"
+        android:paddingBottom="@dimen/textPadding_10dp"
+        android:text="@string/txtChainsmokersTitleP2"
+        android:textColor="@android:color/black"
+        android:textSize="@dimen/txtAviciiP1" />
+
+</LinearLayout>

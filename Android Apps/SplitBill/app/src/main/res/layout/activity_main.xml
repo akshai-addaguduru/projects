@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/txtAppTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:paddingLeft="@dimen/txtPadding_5dp"
+        android:paddingTop="@dimen/txtPadding_10dp"
+        android:paddingRight="@dimen/txtPadding_5dp"
+        android:paddingBottom="@dimen/txtPadding_10dp"
+        android:text="@string/txtTitle1"
+        android:textAllCaps="true"
+        android:textColor="@color/colorAccent"
+        android:textColorHighlight="#039BE5"
+        android:textSize="@dimen/txtSize1"
+        android:textStyle="bold" />
+
+    <ImageView
+        android:id="@+id/splitBillImg"
+        android:layout_width="match_parent"
+        android:layout_height="480dp"
+        android:contentDescription="@string/imgDesc"
+        android:paddingLeft="@dimen/txtPadding_5dp"
+        android:paddingTop="@dimen/txtPadding_10dp"
+        android:paddingRight="@dimen/txtPadding_5dp"
+        android:paddingBottom="@dimen/txtPadding_10dp"
+        app:srcCompat="@drawable/splitbill" />
+
+    <Button
+        android:id="@+id/btnView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:hint="@string/btnEnterHint"
+        android:paddingLeft="@dimen/txtPadding_5dp"
+        android:paddingTop="@dimen/txtPadding_10dp"
+        android:paddingRight="@dimen/txtPadding_5dp"
+        android:paddingBottom="@dimen/txtPadding_10dp"
+        android:text="@string/btnView"
+        android:textAllCaps="true"
+        android:textColorHint="@android:color/holo_red_dark"
+        android:textSize="@dimen/btnSize"
+        android:textStyle="bold" />
+</LinearLayout>

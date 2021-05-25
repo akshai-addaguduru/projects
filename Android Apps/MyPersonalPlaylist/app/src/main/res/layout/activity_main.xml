@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+    <ImageView
+        android:id="@+id/lieImgView"
+        android:layout_width="@dimen/imageWidth"
+        android:layout_height="126dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="@dimen/topMargin5"
+        android:contentDescription="@string/imgLoveDesc"
+        app:srcCompat="@drawable/lovethewayyoulie" />
+
+    <Button
+        android:id="@+id/btnLove"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="@dimen/topMargin2"
+        android:text="@string/btnLoveLabel" />
+
+    <ImageView
+        android:id="@+id/fadedImgView"
+        android:layout_width="@dimen/imageWidth"
+        android:layout_height="@dimen/newImgHt"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="@dimen/topMargin2"
+        android:contentDescription="@string/imgFadedDesc"
+        app:srcCompat="@drawable/faded" />
+
+    <Button
+        android:id="@+id/btnFaded"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="@dimen/topMargin2"
+        android:text="@string/btnFadedLabel" />
+
+    <ImageView
+        android:id="@+id/breakImgView"
+        android:layout_width="@dimen/imageWidth"
+        android:layout_height="@dimen/newImgHt"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="@dimen/topMargin2"
+        android:contentDescription="@string/imgBreakDesc"
+        app:srcCompat="@drawable/breakyourheart" />
+
+    <Button
+        android:id="@+id/btnBreak"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="@dimen/topMargin2"
+        android:text="@string/btnBreakLabel" />
+</LinearLayout>
