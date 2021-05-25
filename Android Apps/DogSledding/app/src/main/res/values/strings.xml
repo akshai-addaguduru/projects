@@ -1,7 +1,0 @@
-<resources>
-    <string name="app_name">DogSledding</string>
-    <string name="txtSled">Sled Dog</string>
-    <string name="txtTitle">Dog Sledding - ALASKA</string>
-    <string name="txtDesc">A powerful pack of huskies pulling a speeding dogsled and musher along a snow-packed trail: it’s the quintessential Alaska adventure and one that often fuels the daydreams of travelers. It doesn’t have to be winter to drive a dog sled in Alaska. Get a taste of the one of the north’s greatest adventures in summer too! Summer sun and winter fun unite for a doggone good time. </string>
-    <string name="btnDate">Select a date for Dog Sledding</string>
-</resources>
