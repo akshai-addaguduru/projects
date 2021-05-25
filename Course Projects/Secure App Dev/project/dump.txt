@@ -1,0 +1,31 @@
+function display_comments($postid){
+	global $mysqli;
+	echo "Comments for Postid= $postid <br>";
+	$prepared_sql = "SELECT content from comments where postid=?;";
+	if(!$stmt = $mysqli->prepare($prepared_sql))
+ echo "Prepared Statement Error";
+	$stmt->bind_param('i', $postid);
+	if(!$stmt->execute()) echo "Execute failed ";
+	$content = NULL;
+	if(!$stmt->bind_result($content)) echo "Binding failed ";
+	$num_rows = 0;
+	while($stmt->fetch()) {
+ echo htmlentities($content) . "<br>";
+ $num_rows++;
+	} 
+	if($num_rows==0) echo "No comment for this post. Please post your comment";
+}
+
+function updateposts($postid,$editpost) {
+	echo "postid: $postid editpost: $editpost";
+		global $mysqli;
+	 $prepared_sql = "UPDATE posts SET postmsg=? WHERE postID=?;";
+	 if(!$stmt=$mysqli->prepare($prepared_sql))
+		 echo "prepared statement error";
+	 $stmt->bind_param("si",htmlspecialchars($editpost),htmlspecialchars($postid));
+	 if(!$stmt->execute()){
+		 return FALSE; 
+
+	 return TRUE;
+ }
+}

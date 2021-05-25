@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="txtTitleSize">28sp</dimen>
+    <dimen name="padding_5dp">5dp</dimen>
+    <dimen name="txtDescSize">22sp</dimen>
+    <dimen name="listItemSize">20sp</dimen>
+    <dimen name="pictureTitleTextSize">30sp</dimen>
+
+</resources>

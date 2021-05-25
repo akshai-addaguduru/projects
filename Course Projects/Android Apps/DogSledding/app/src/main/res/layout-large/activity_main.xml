@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="horizontal"
+    tools:context=".MainActivity">
+
+    <ImageView
+        android:id="@+id/DogSleddingImgView"
+        android:layout_width="@dimen/lrgSledWidth"
+        android:layout_height="@dimen/lrgSledHeight"
+        android:layout_weight="1"
+        android:contentDescription="@string/txtSled"
+        app:srcCompat="@drawable/dogsledding" />
+
+    <TableLayout
+        android:id="@+id/tblLayout"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_gravity="center_vertical"
+        android:layout_weight="1">
+
+        <TableRow
+            android:id="@+id/tblRow1"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content" >
+            <View android:layout_height="@dimen/lrgViewHeight" />
+
+            <TextView
+                android:id="@+id/titleTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@color/titleBackground"
+                android:gravity="fill_horizontal"
+                android:padding="@dimen/lrgTitlePadding"
+                android:text="@string/txtTitle"
+                android:textColor="@android:color/holo_blue_dark"
+                android:textSize="@dimen/lrgTitleSize"
+                android:textStyle="bold"
+                app:fontFamily="serif" />
+        </TableRow>
+
+        <TableRow
+            android:id="@+id/tblRow2"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content" >
+            <View android:layout_height="@dimen/lrgViewHeight" />
+
+            <TextView
+                android:id="@+id/descTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="left"
+                android:padding="@dimen/lrgDescPadding"
+                android:text="@string/txtDesc"
+                android:textColor="@android:color/black"
+                android:textSize="@dimen/lrgDescTextSize" />
+        </TableRow>
+
+        <TableRow
+            android:id="@+id/tblRow3"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content" >
+            <View android:layout_height="@dimen/lrgViewHeight" />
+
+            <Button
+                android:id="@+id/btnDate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:padding="@dimen/lrgBtnPadding"
+                android:text="@string/btnDate"
+                android:textSize="@dimen/lrgBtnTextSize" />
+        </TableRow>
+
+        <TableRow
+            android:id="@+id/tblRow4"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content" >
+            <View android:layout_height="@dimen/lrgViewHeight" />
+
+            <TextView
+                android:id="@+id/resTextView"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:padding="@dimen/lrgResPadding"
+                android:textColor="@android:color/black"
+                android:textSize="@dimen/lrgResTextSize" />
+        </TableRow>
+    </TableLayout>
+
+</LinearLayout>

@@ -1,2 +1,2 @@
 # projects
-This repo holds the important projects associated with me
+This repo holds the important projects associated to Akshai Addaguduru

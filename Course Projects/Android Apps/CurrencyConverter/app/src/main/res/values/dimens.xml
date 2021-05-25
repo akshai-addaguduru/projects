@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="margin5dp">5dp</dimen>
+    <dimen name="margin15dp">15dp</dimen>
+    
+    <dimen name="titleTextSize">32sp</dimen>
+    <dimen name="textFieldTextSize">25sp</dimen>
+    <dimen name="radBtnTextSize">20sp</dimen>
+    <dimen name="btnConvertTextSize">25sp</dimen>
+    <dimen name="textResultTextSize">25sp</dimen>
+</resources>

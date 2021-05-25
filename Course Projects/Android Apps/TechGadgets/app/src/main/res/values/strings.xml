@@ -1,0 +1,22 @@
+<resources>
+    <string name="app_name">Tech Gadgets App</string>
+    <string name="txtTitle">Tech Gadgets Latest</string>
+    <string name="txtImage">Home Page Image</string>
+    <string name="appDesc">This app shows most used Top 5 latest gadgets</string>
+    <string name="txtGadget1">Playdate : Portable Gaming</string>
+    <string name="txtGadget2">Oculus Quest: All-in-One VR</string>
+    <string name="txtGadget3">DJI Osmo Action</string>
+    <string name="txtGadget4">Google Pixel 3A</string>
+    <string name="txtGadget5">Samsung Galaxy S10</string>
+    <string name="open_page">OPEN PAGE</string>
+    <string name="pictureTitleText">Picture Text</string>
+    <string name="btnDesc">Click To View</string>
+
+    <string-array name="listGadgets">
+        <item>Playdate : Portable Gaming</item>
+        <item>Oculus Quest: All-in-One VR</item>
+        <item>DJI Osmo Action</item>
+        <item>Google Pixel 3A</item>
+        <item>Samsung Galaxy S10</item>
+    </string-array>
+</resources>

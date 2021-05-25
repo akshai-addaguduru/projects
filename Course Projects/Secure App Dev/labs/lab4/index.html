@@ -1,0 +1,68 @@
+<html>
+<title> Homepage of Akshai Addaguduru </title>
+
+<script> alert("Hello World") </script>
+
+<script>
+function startTime()
+{
+document.getElementById('clock').innerHTML = new Date();
+setTimeout(startTime, 500);
+}
+</script>
+
+<script>
+document.write("Content generated from document.write");
+document.write("<script>alert('script code is generated within script code');</"+"script>");
+</script>
+
+<script>
+if (document.cookie.indexOf("username")<0)
+	{
+		alert('no username in cookie, set a new one');
+		document.cookie = "username=akshai";
+	}
+	else
+		alert("my cookie:" +document.cookie);
+</script>
+
+<script
+src="https://phu-udayton.bitbucket.io/remote.js">
+</script>
+
+<script>
+	
+	var shown=false;
+function showhide()
+	{
+		if(shown) {
+			document.getElementById('email').innerHTML = "show my email";
+			shown = false;
+		}
+		else
+		{
+			var myemail = "<a href='mailto:addagudurua1"+"@"+"udayton.edu'>addagudurua1" +"@"+"udayton.edu</a>";
+			//alert("myemail="+myemail);
+			document.getElementById('email').innerHTML=myemail;
+			shown = true;
+		}
+	}	
+</script>
+
+<body onload = "startTime()">
+<br>
+Current Time: <div id ="clock"> </div>
+
+<!--script type="text/JavaScript" src="functions.js"> </script-->
+<body>
+
+<h1>Secure Application Development - Spring 2019</h1>
+<h2>Akshai Addaguduru, University of Dayton</h2>
+<p1>Just a simple HTML page for Lab4</p1>
+
+<br><br>
+<img src = "https://media.licdn.com/dms/image/C4D03AQFD-ZL7sOPYJg/profile-displayphoto-shrink_200_200/0?e=1556755200&v=beta&t=Z-9ZfQ-OF20Rfzh4SXaQ1oxV4BVlz7vfVfLcDqciI5w" height="150"> </img>
+<br> <br>
+<div id="email" onclick="showhide()">show my email</div>
+</body>
+</html>
