@@ -19,7 +19,7 @@
 
 
         <!-- <li ngbDropdown *ngIf="auth.appUser$ | async as user; else anonymousUser" class="nav-item dropdown "> -->
-        <li ngbDropdown *ngIf="appUser | async as user; else anonymousUser" class="nav-item dropdown ">
+        <li ngbDropdown *ngIf=" appUser; else anonymousUser" class="nav-item dropdown ">
 
           <!-- anonymousUser is the else block-->
           <!-- unwrapping the user using async-->
@@ -28,7 +28,7 @@
 
           <ul ngbDropdownMenu class="dropdown-menu " aria-labelledby="dropdown01">
             <li><a class="dropdown-item" routerLink="/my/orders">My Orders</a></li>
-            <ng-container *ngIf="user.isAdmin">
+            <ng-container *ngIf="appUser.isAdmin">
               <li><a class="dropdown-item" routerLink="/admin/orders">Manage Orders</a></li>
               <li><a class="dropdown-item" routerLink="/admin/products">Manage Products</a></li>
             </ng-container>
