@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".Amtrak_Info">
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/txtTitle1TopMargin"
+        android:gravity="center"
+        android:text="@string/txtTitle"
+        android:textColor="@android:color/black"
+        android:textSize="@dimen/txtTitleSize"
+        tools:text="@string/txtTitle" />
+
+    <TextView
+        android:id="@+id/txtOutput"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/txtOutput"
+        android:textColor="@color/colorAccent"
+        android:textSize="@dimen/txtOutput" />
+
+    <ImageView
+        android:id="@+id/imgOutput"
+        android:layout_width="match_parent"
+        android:layout_height="414dp"
+        android:layout_gravity="clip_horizontal"
+        android:contentDescription="@string/imgTrainDesc"
+        app:srcCompat="@drawable/train2" />
+</LinearLayout>

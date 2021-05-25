@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">Music Scene App</string>
+    <string name="txtTitle1">Avicii Advances to No. 1 on Dance/Mix Show Airplay Chart With \'SOS\'</string>
+    <string name="textAviciiImage">Avicii Image</string>
+    <string name="btnViewText">View News</string>
+    <string name="btnViewHint">Click to read the Article NOW</string>
+    <string name="txtAviciiP1">Avicii, who died on April 20, 2018, tops Billboard\'s Dance/Mix Show Airplay chart (dated June 1) with \"SOS,\" featuring Aloe Blacc, marking the first posthumous leader in the chart\'s nearly 16-year history.</string>
+    <string name="txtAviciiP2">It\'s the DJ\'s second No. 1 and Blacc\'s first, as the latter was uncredited as the vocalist on Avicii\'s first leader, \"Wake Me Up!\" (10 weeks at No. 1 in 2013). \"SOS,\" remixed by Laidback Luke and others, also sails 14-8 on Dance Club Songs, becoming Avicii\'s 12th top 10 and Blacc\'s first.</string>
+    <string name="txtTitle2">The Chainsmokers Debut Smoldering New Track \'Kills You Slowly\': Listen</string>
+    <string name="txtChainsmokersImage">Chainsmokers Image</string>
+    <string name="txtChainsmokersTitleP1">Love is a battlefield, or maybe it\'s a trap. It\'s definitely set to a half-time rhythm and some banging\' 808s on The Chainsmokers\' new pop smolderer \"Kills You Slowly.\" It\'s a slow jam for all those moments you know a relationship is burning to ashes, but you\'re not yet ready to turn from the blaze.</string>
+    <string name="txtChainsmokersTitleP2" >Singer Drew Taggart needs no assistance on this solo single. \"Kills You Slowly\" follows The Chainsmokers\' 5 Seconds of Summer duet as the second tune from its growing album World War Joy. Just as with second LP Sick Boy, World War Joy will reveal itself one track at a time throughout 2019.</string>
+</resources>

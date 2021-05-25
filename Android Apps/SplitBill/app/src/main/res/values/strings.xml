@@ -1,0 +1,20 @@
+<resources>
+    <string name="app_name">SplitBill</string>
+    <string name="txtTitle1">Welcome to Split Bill App</string>
+    <string name="btnView">ENTER</string>
+    <string name="btnEnterHint">Click Here to Enter the App</string>
+    <string name="imgDesc">SplitImage</string>
+    <string name="txtTitle2">Enter Details to Split Bill</string>
+    <string name="txtCount">Number of People</string>
+    <string name="prompt">Select Tip</string>
+    <string name="txtCost">Find the Split Cost</string>
+
+    <string-array name="txtTip">
+        <item> Add a 20% tip for Excellent Service </item>
+        <item> Add a 15% tip for Average Service </item>
+        <item> Add a 5% tip for a Poor Service </item>
+    </string-array>
+    <string name="txtBill">Enter the total bill amount</string>
+    <string name="SplitCostDesc">Split Bill Cost Image</string>
+    <string name="txtCommentTitle">Comments</string>
+</resources>
