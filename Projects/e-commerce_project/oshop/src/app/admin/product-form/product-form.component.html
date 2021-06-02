@@ -1,20 +1,35 @@
-<form>
+<!--applying NgModel directive on each of input fields which would create a form control object for each input field-->
+<!--when we submit the form, we can read the value of the form as a one JSON object and then send it to firebase for persistence-->
+
+<form #f="ngForm" (ngSubmit)="save(f.value)">   <!--#f will help as to call a form object..ex: f.price-->
 
   <div class="form-group">
-    <label for="title">Title</label>
-    <input id="title" type="text" class="form-control">
+    <label for="imageUrl">Title</label>
+    <input ngModel name="title" id="title" type="text" class="form-control">
   </div>
 
   <div class="form-group">
     <label for="price">Price</label>
-    <input id="title" type="number" class="form-control">
+    <div class="input-group">
+      <span class="input-group-text">$</span>     <!-- added this using forms->input group from getbootstrap.com-->
+        <input ngModel name="price" id="price" type="number" class="form-control">
+      </div>
   </div>
 
   <div class="form-group">
     <label for="category">Category</label>
-    <select id="category" class="form-control">
-        <option value=""></option>
+    <select ngModel name="category" id="category" class="form-control">
+      <option value=""></option>
+      <option *ngFor="let c of categories$ | async" [value]="c.key"> {{ c.name }} </option>  <!-- we're using [] property binding here to set to 'key'-->
+      <!-- every object in firebase has 'key' property which is a unique identifier for that object....here c.$key would be each category name like bread, fruits, etc. -->   
     </select>
   </div>
+
+  <div class="form-group">
+    <label for="imageUrl">Image URL</label>
+    <input ngModel name="imageUrl" id="imageUrl" type="text" class="form-control">
+  </div>
+
+  <button class="btn btn-primary">Save</button>
 
 </form>
