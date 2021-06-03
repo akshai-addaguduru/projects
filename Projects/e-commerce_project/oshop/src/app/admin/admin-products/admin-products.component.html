@@ -13,13 +13,14 @@
 
   <tbody>
     <tr *ngFor="let p of products$ | async">
-      <!-- <td> {{p.title}} </td> -->           <!--previously used like this..new way to use is seen below-->
-      <td> {{p.payload.val().title}} </td>
-      <td> {{p.payload.val().price}} </td>
+      <td> {{p.title}} </td>           <!--previously used like this..new way to use is seen below-->
+      <td> {{p.price}} </td>
+      <!-- <td> {{p.snapshot().val().title | json}} </td>
+      <td> {{p.snapshot().val().price | json}} </td> -->
       <td>
-        <a [routerLink]="['/admin/products/', p.$key]">Edit</a>
+        <a [routerLink]="['/admin/products/', p.key]">Edit</a>
         <!--[routerLink] propert binding here bcz every element needs to be fetched using specific ID-->
-        <!--$key will determine which product to be edited based off on its value in the Firebase DB-->
+        <!--'key' will determine which product to be edited based off on its value in the Firebase DB-->
       </td>
     </tr>
   </tbody>
