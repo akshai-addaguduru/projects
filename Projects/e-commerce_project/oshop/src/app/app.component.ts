@@ -15,7 +15,10 @@ export class AppComponent {
         userService.save(user);
 
         let returnUrl = localStorage.getItem('returnUrl');
-        router.navigateByUrl(returnUrl);
+        // router.navigateByUrl(returnUrl);   // this is right but redirects to the homepage everytime on server reload..below method reloads to the same localstorage item
+        if(returnUrl == null) {
+          router.navigate(['/']);
+      }
       }
     });
   }

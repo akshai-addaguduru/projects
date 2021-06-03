@@ -1,1 +1,27 @@
-<a routerLink="/admin/products/new" class="btn btn-primary">New Product</a>
+<p>
+  <a routerLink="/admin/products/new" class="btn btn-primary">New Product</a>
+</p>
+
+<table class="table">
+  <thead>
+    <tr>
+      <th>Title</th>
+      <th>Price</th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <tr *ngFor="let p of products$ | async">
+      <!-- <td> {{p.title}} </td> -->           <!--previously used like this..new way to use is seen below-->
+      <td> {{p.payload.val().title}} </td>
+      <td> {{p.payload.val().price}} </td>
+      <td>
+        <a [routerLink]="['/admin/products/', p.$key]">Edit</a>
+        <!--[routerLink] propert binding here bcz every element needs to be fetched using specific ID-->
+        <!--$key will determine which product to be edited based off on its value in the Firebase DB-->
+      </td>
+    </tr>
+  </tbody>
+
+</table>
