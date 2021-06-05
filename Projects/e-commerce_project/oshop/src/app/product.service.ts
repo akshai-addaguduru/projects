@@ -15,29 +15,21 @@ export class ProductService {
   }
 
   getAll() {    //method to view products added to firebase..also implemented 
-    // this.db.list('/products').snapshotChanges();    //call the products object from firebase to view details...check admin-product.component..admin-products.component...
-    // above way not working..below way works
-
-    // this.db.list('/products').valueChanges().subscribe(products => {
-    //   console.log(products);
-    //   products.forEach(products => { console.log(products) });
-    // });;    //this doesn't render view...but perfectly shows details in the console
-
-    // return this.db.list('/products').snapshotChanges().pipe(
-    //   map((products: any[]) => products.map(prod => {
-    //     console.log(products);
-    //     const payload = prod.payload.val();                                       // these snapshotchanges and pipe(map) should be added like this for new angular versions
-    //     const key = prod.key;
-    //     return <any>{ key, ...payload };
-    //   })));
+    // this.db.list('/products').valueChanges();    //call the products object from firebase to view details...check admin-product.component..admin-products.component...
+    // above way not working..doesn't display any data in the view page....below way works
 
     return this.db.list('/products').snapshotChanges().pipe(
-      map((products: any[]) => products.map(prod => {
-        console.log(products);
-        const payload = prod.payload.val();                                       // these snapshotchanges and pipe(map) should be added like this for new angular versions
-        const key = prod.key;
+      map((actions: any[]) => actions.map(prod => {
+        // console.log(products);
+        const payload = prod.payload.val();                     // these snapshotchanges and pipe(map) should be added like this for new angular versions
+        const key = prod.key;                                   // this was very tough to solve...this block copied from category.service
         return <any>{ key, ...payload };
       })));
 
   }
+
+  get(productId) {
+    return this.db.object('/products/' + productId);   // call this is the product-form.component
+  }
+
 }

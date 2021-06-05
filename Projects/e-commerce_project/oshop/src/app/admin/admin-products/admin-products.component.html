@@ -1,3 +1,5 @@
+<!--this is to view the existing products list from Firebase DB-->
+
 <p>
   <a routerLink="/admin/products/new" class="btn btn-primary">New Product</a>
 </p>
@@ -13,8 +15,8 @@
 
   <tbody>
     <tr *ngFor="let p of products$ | async">
-      <td> {{p.title}} </td>           <!--previously used like this..new way to use is seen below-->
-      <td> {{p.price}} </td>
+      <td> {{p?.title}} </td>           <!--previously used like this..new way to use is seen below-->
+      <td> {{p?.price}} </td>
       <!-- <td> {{p.snapshot().val().title | json}} </td>
       <td> {{p.snapshot().val().price | json}} </td> -->
       <td>

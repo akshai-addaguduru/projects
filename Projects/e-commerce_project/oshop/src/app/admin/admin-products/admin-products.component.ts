@@ -12,7 +12,7 @@ import { Component, OnInit } from '@angular/core';
 export class AdminProductsComponent implements OnInit {
   products$;   //any varibale with a $ sign is always an observable
 
-  constructor(private productService: ProductService, db: AngularFireDatabase) {
+  constructor(private productService: ProductService) {
     this.products$ = this.productService.getAll();      // here getAll() is an observable..so we use products$ as to call an observable..declare on top class
   }
 

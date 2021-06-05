@@ -10,7 +10,7 @@ export class CategoryService {
   constructor(private db: AngularFireDatabase) { }
 
   getCategories() {
-    // return this.db.list('/categories', ref => (ref.orderByChild('name')));    // ref is used in newer angular...cant use query way anymore...orderbychild here sorts by name in the dropdown
+    // return this.db.list('/categories', ref => (ref.orderByChild('name'))).valueChanges();    // ref is used in newer angular...cant use query way anymore...orderbychild here sorts by name in the dropdown
     return this.db.list('/categories').snapshotChanges().pipe(
       map((categories: any[]) => categories.map(prod => {
       const payload = prod.payload.val();                                       // these snapshotchanges and pipe(map) should be added like this for new angular versions

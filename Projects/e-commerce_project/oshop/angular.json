@@ -16,7 +16,9 @@
             "allowedCommonJsDependencies": [
               "rxjs-compat",
               "rxjs",
-              "ng2-validation"
+              "ng2-validation",
+              "libphonenumber",
+              "babel-runtime"
             ],
             "outputPath": "dist/oshop",
             "index": "src/index.html",
@@ -43,7 +45,7 @@
               ],
               "optimization": true,
               "outputHashing": "all",
-              "sourceMap": false,
+              "sourceMap": true,
               "namedChunks": false,
               "extractLicenses": true,
               "vendorChunk": false,
